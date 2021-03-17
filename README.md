@@ -1,2 +1,2 @@
-# ISIS-Oxford_x_NYU
-The Oxford/NYU penpal
+# ISIS Oxford x NYU Arrangement
+The Oxford/NYU penpal exhange program
