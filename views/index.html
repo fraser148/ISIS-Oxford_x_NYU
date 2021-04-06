@@ -16,12 +16,12 @@
   </nav>
 
   <div class="flex justify-center mt-16">
-    <form action="/charge" method="POST" class="flex flex-col w-1/3 bg-gray-500 p-5 rounded shadow-md bg-opacity-70 font-sans mb-20">
+    <form action="/charge" method="POST" class="flex flex-col w-96 xl:w-auto m-5 bg-gray-500 p-5 rounded shadow-md bg-opacity-70 font-sans mb-20">
       <input class="shadow-md bg-gray-100 rounded border-gray-200 border-solid border-2 p-2 h-10 mb-4" type="text" name="name" placeholder="Name" required>
       <input type="email" class="shadow-inner bg-gray-100 rounded border-gray-200 border-solid border-2 p-2 h-10 mb-4" name="email" placeholder="Email" required>
 
         <div class="bg-gray-900 text-white radios-top p-4">
-      <p class="">Please select your University:</p>
+          <p class="">Please select your University:</p>
         </div>
         <div class="bg-gray-100 radios-main mb-4 p-2 pl-4">
         <div class="flex items-center mr-4 mb-4">
@@ -31,50 +31,1328 @@
            University of Oxford</label>
          </div>
         <div class="flex items-center mr-4 mb-4">
-          <input id="nyu" type="radio" name="university" class="hidden" value="nyu" />
+          <input id="nyu" type="radio" name="university" class="hidden" value="nyu" required/>
           <label for="nyu" class="flex items-center cursor-pointer text-l">
            <span class="w-4 h-4 inline-block mr-2 rounded-full border border-grey flex-no-shrink"></span>
            New York University</label>
          </div>
         </div>  
 
-
-
+        
         <div class="bg-gray-900 text-white radios-top p-4">
-          <p class="">What kind of writing are you interested in swapping/receiving feedback on with this PenPal scheme? (select multiple options)</p>
-            </div>
-            <div class="bg-gray-100 radios-main mb-4 p-2 pl-4">
-            <div class="flex items-center mr-4 mb-4">
-              <input id="poetry" type="checkbox" name="university" class="hidden" value="poetry" required />
-              <label for="poetry" class="flex items-center cursor-pointer text-l">
-               <span class="w-4 h-4 inline-block mr-2 border border-grey flex-no-shrink"></span>
-               Poetry</label>
-             </div>
-            <div class="flex items-center mr-4 mb-4">
-              <input id="short-fic" type="checkbox" name="university" class="hidden" value="short-fic" />
-              <label for="short-fic" class="flex items-center cursor-pointer text-l">
-               <span class="w-4 h-4 inline-block mr-2  border border-grey flex-no-shrink"></span>
-               Short-fiction</label>
-             </div>
-            <div class="flex items-center mr-4 mb-4">
-              <input id="non-fic" type="checkbox" name="university" class="hidden" value="non-fic" />
-              <label for="non-fic" class="flex items-center cursor-pointer text-l">
-               <span class="w-4 h-4 inline-block mr-2  border border-grey flex-no-shrink"></span>
-               Non-fiction</label>
-             </div>
-            <div class="flex items-center mr-4 mb-4">
-              <input id="plays" type="checkbox" name="university" class="hidden" value="plays" />
-              <label for="plays" class="flex items-center cursor-pointer text-l">
-               <span class="w-4 h-4 inline-block mr-2  border border-grey flex-no-shrink"></span>
-               Plays</label>
-             </div>
-            <div class="flex items-center mr-4 mb-4">
-              <input id="Lyrics" type="checkbox" name="university" class="hidden" value="Lyrics" />
-              <label for="Lyrics" class="flex items-center cursor-pointer text-l">
-               <span class="w-4 h-4 inline-block mr-2  border border-grey flex-no-shrink"></span>
-               Lyrics</label>
-             </div>
-            </div>  
+          <p class="">I want to match with someone who is: </p>
+        </div>
+        <div class="bg-gray-100 radios-main mb-4 p-2 pl-4">
+        <div class="flex items-center mr-4 mb-4">
+          <input id="QID7A1" type="radio" name="QID7" class="hidden" value="QID7A1" />
+          <label for="QID7A1" class="flex items-center cursor-pointer text-l">
+            <span class="w-4 h-4 inline-block mr-2 rounded-full border border-grey flex-no-shrink"></span>
+            Male 
+          </label>
+        </div>
+        
+        <div class="flex items-center mr-4 mb-4">
+          <input id="QID7A2" type="radio" name="QID7" class="hidden" value="QID7A2" />
+          <label for="QID7A2" class="flex items-center cursor-pointer text-l">
+            <span class="w-4 h-4 inline-block mr-2 rounded-full border border-grey flex-no-shrink"></span>
+            Female 
+          </label>
+        </div>
+        
+        <div class="flex items-center mr-4 mb-4">
+          <input id="QID7A3" type="radio" name="QID7" class="hidden" value="QID7A3" />
+          <label for="QID7A3" class="flex items-center cursor-pointer text-l">
+            <span class="w-4 h-4 inline-block mr-2 rounded-full border border-grey flex-no-shrink"></span>
+            Non-binary 
+          </label>
+        </div>
+        
+        <div class="flex items-center mr-4 mb-4">
+          <input id="QID7A4" type="radio" name="QID7" class="hidden" value="QID7A4" />
+          <label for="QID7A4" class="flex items-center cursor-pointer text-l">
+            <span class="w-4 h-4 inline-block mr-2 rounded-full border border-grey flex-no-shrink"></span>
+            Any gender
+          </label>
+        </div>
+        
+        </div>
+        
+        <div class="bg-gray-900 text-white radios-top p-4">
+          <p class="">What are you looking for with this Match </p>
+        </div>
+        <div class="bg-gray-100 radios-main mb-4 p-2 pl-4">
+        <div class="flex items-center mr-4 mb-4">
+          <input id="QID8A1" type="radio" name="QID8" class="hidden" value="QID8A1" />
+          <label for="QID8A1" class="flex items-center cursor-pointer text-l">
+            <span class="w-4 h-4 inline-block mr-2 rounded-full border border-grey flex-no-shrink"></span>
+            Writing buddy  
+          </label>
+        </div>
+        
+        <div class="flex items-center mr-4 mb-4">
+          <input id="QID8A2" type="radio" name="QID8" class="hidden" value="QID8A2" />
+          <label for="QID8A2" class="flex items-center cursor-pointer text-l">
+            <span class="w-4 h-4 inline-block mr-2 rounded-full border border-grey flex-no-shrink"></span>
+            Friend
+          </label>
+        </div>
+        
+        <div class="flex items-center mr-4 mb-4">
+          <input id="QID8A3" type="radio" name="QID8" class="hidden" value="QID8A3" />
+          <label for="QID8A3" class="flex items-center cursor-pointer text-l">
+            <span class="w-4 h-4 inline-block mr-2 rounded-full border border-grey flex-no-shrink"></span>
+            Soulmate
+          </label>
+        </div>
+        
+        <div class="flex items-center mr-4 mb-4">
+          <input id="QID8A4" type="radio" name="QID8" class="hidden" value="QID8A4" />
+          <label for="QID8A4" class="flex items-center cursor-pointer text-l">
+            <span class="w-4 h-4 inline-block mr-2 rounded-full border border-grey flex-no-shrink"></span>
+            All of the above 
+          </label>
+        </div>
+        
+        </div>
+        
+        <div class="bg-gray-900 text-white radios-top p-4">
+          <p class="">What are your political beliefs? </p>
+        </div>
+        <div class="bg-gray-100 radios-main mb-4 p-2 pl-4">
+        <div class="flex items-center mr-4 mb-4">
+          <input id="QID9A1" type="radio" name="QID9" class="hidden" value="QID9A1" />
+          <label for="QID9A1" class="flex items-center cursor-pointer text-l">
+            <span class="w-4 h-4 inline-block mr-2 rounded-full border border-grey flex-no-shrink"></span>
+            Very left wing
+          </label>
+        </div>
+        
+        <div class="flex items-center mr-4 mb-4">
+          <input id="QID9A2" type="radio" name="QID9" class="hidden" value="QID9A2" />
+          <label for="QID9A2" class="flex items-center cursor-pointer text-l">
+            <span class="w-4 h-4 inline-block mr-2 rounded-full border border-grey flex-no-shrink"></span>
+            Left wing 
+          </label>
+        </div>
+        
+        <div class="flex items-center mr-4 mb-4">
+          <input id="QID9A3" type="radio" name="QID9" class="hidden" value="QID9A3" />
+          <label for="QID9A3" class="flex items-center cursor-pointer text-l">
+            <span class="w-4 h-4 inline-block mr-2 rounded-full border border-grey flex-no-shrink"></span>
+            Centre
+          </label>
+        </div>
+        
+        <div class="flex items-center mr-4 mb-4">
+          <input id="QID9A4" type="radio" name="QID9" class="hidden" value="QID9A4" />
+          <label for="QID9A4" class="flex items-center cursor-pointer text-l">
+            <span class="w-4 h-4 inline-block mr-2 rounded-full border border-grey flex-no-shrink"></span>
+            Conservative 
+          </label>
+        </div>
+        
+        <div class="flex items-center mr-4 mb-4">
+          <input id="QID9A5" type="radio" name="QID9" class="hidden" value="QID9A5" />
+          <label for="QID9A5" class="flex items-center cursor-pointer text-l">
+            <span class="w-4 h-4 inline-block mr-2 rounded-full border border-grey flex-no-shrink"></span>
+            Very conservative 
+          </label>
+        </div>
+        
+        <div class="flex items-center mr-4 mb-4">
+          <input id="QID9A6" type="radio" name="QID9" class="hidden" value="QID9A6" />
+          <label for="QID9A6" class="flex items-center cursor-pointer text-l">
+            <span class="w-4 h-4 inline-block mr-2 rounded-full border border-grey flex-no-shrink"></span>
+            Not political 
+          </label>
+        </div>
+        
+        </div>
+        
+        <div class="bg-gray-900 text-white radios-top p-4">
+          <p class="">What time of day does writing inspiration/motivation hit? </p>
+        </div>
+        <div class="bg-gray-100 radios-main mb-4 p-2 pl-4">
+        <div class="flex items-center mr-4 mb-4">
+          <input id="QID14A1" type="radio" name="QID14" class="hidden" value="QID14A1" />
+          <label for="QID14A1" class="flex items-center cursor-pointer text-l">
+            <span class="w-4 h-4 inline-block mr-2 rounded-full border border-grey flex-no-shrink"></span>
+            Early in the morning on my run 
+          </label>
+        </div>
+        
+        <div class="flex items-center mr-4 mb-4">
+          <input id="QID14A2" type="radio" name="QID14" class="hidden" value="QID14A2" />
+          <label for="QID14A2" class="flex items-center cursor-pointer text-l">
+            <span class="w-4 h-4 inline-block mr-2 rounded-full border border-grey flex-no-shrink"></span>
+            When I’m in the shower 
+          </label>
+        </div>
+        
+        <div class="flex items-center mr-4 mb-4">
+          <input id="QID14A3" type="radio" name="QID14" class="hidden" value="QID14A3" />
+          <label for="QID14A3" class="flex items-center cursor-pointer text-l">
+            <span class="w-4 h-4 inline-block mr-2 rounded-full border border-grey flex-no-shrink"></span>
+            Around lunch
+          </label>
+        </div>
+        
+        <div class="flex items-center mr-4 mb-4">
+          <input id="QID14A4" type="radio" name="QID14" class="hidden" value="QID14A4" />
+          <label for="QID14A4" class="flex items-center cursor-pointer text-l">
+            <span class="w-4 h-4 inline-block mr-2 rounded-full border border-grey flex-no-shrink"></span>
+            Midnight
+          </label>
+        </div>
+        
+        <div class="flex items-center mr-4 mb-4">
+          <input id="QID14A5" type="radio" name="QID14" class="hidden" value="QID14A5" />
+          <label for="QID14A5" class="flex items-center cursor-pointer text-l">
+            <span class="w-4 h-4 inline-block mr-2 rounded-full border border-grey flex-no-shrink"></span>
+            Whenever the muses happen to strike
+          </label>
+        </div>
+        
+        </div>
+        
+        <div class="bg-gray-900 text-white radios-top p-4">
+          <p class="">Choose an album</p>
+        </div>
+        <div class="bg-gray-100 radios-main mb-4 p-2 pl-4">
+        <div class="flex items-center mr-4 mb-4">
+          <input id="QID16A1" type="radio" name="QID16" class="hidden" value="QID16A1" />
+          <label for="QID16A1" class="flex items-center cursor-pointer text-l">
+            <span class="w-4 h-4 inline-block mr-2 rounded-full border border-grey flex-no-shrink"></span>
+            ’AM’ - Arctic Monkeys
+          </label>
+        </div>
+        
+        <div class="flex items-center mr-4 mb-4">
+          <input id="QID16A2" type="radio" name="QID16" class="hidden" value="QID16A2" />
+          <label for="QID16A2" class="flex items-center cursor-pointer text-l">
+            <span class="w-4 h-4 inline-block mr-2 rounded-full border border-grey flex-no-shrink"></span>
+            ’The Most Beautiful Moments of Youth Pt.1’ - BTS
+          </label>
+        </div>
+        
+        <div class="flex items-center mr-4 mb-4">
+          <input id="QID16A3" type="radio" name="QID16" class="hidden" value="QID16A3" />
+          <label for="QID16A3" class="flex items-center cursor-pointer text-l">
+            <span class="w-4 h-4 inline-block mr-2 rounded-full border border-grey flex-no-shrink"></span>
+            ’Channel Orange’ - Frank Ocean 
+          </label>
+        </div>
+        
+        <div class="flex items-center mr-4 mb-4">
+          <input id="QID16A4" type="radio" name="QID16" class="hidden" value="QID16A4" />
+          <label for="QID16A4" class="flex items-center cursor-pointer text-l">
+            <span class="w-4 h-4 inline-block mr-2 rounded-full border border-grey flex-no-shrink"></span>
+            ’Lemonade’ - Beyonc’
+          </label>
+        </div>
+        
+        <div class="flex items-center mr-4 mb-4">
+          <input id="QID16A5" type="radio" name="QID16" class="hidden" value="QID16A5" />
+          <label for="QID16A5" class="flex items-center cursor-pointer text-l">
+            <span class="w-4 h-4 inline-block mr-2 rounded-full border border-grey flex-no-shrink"></span>
+            ’Folklore’ - Taylor Swift
+          </label>
+        </div>
+        
+        </div>
+        
+        <div class="bg-gray-900 text-white radios-top p-4">
+          <p class="">Choose your dystopian Novel </p>
+        </div>
+        <div class="bg-gray-100 radios-main mb-4 p-2 pl-4">
+        <div class="flex items-center mr-4 mb-4">
+          <input id="QID17A1" type="radio" name="QID17" class="hidden" value="QID17A1" />
+          <label for="QID17A1" class="flex items-center cursor-pointer text-l">
+            <span class="w-4 h-4 inline-block mr-2 rounded-full border border-grey flex-no-shrink"></span>
+            The Handmaid’s Tale
+          </label>
+        </div>
+        
+        <div class="flex items-center mr-4 mb-4">
+          <input id="QID17A2" type="radio" name="QID17" class="hidden" value="QID17A2" />
+          <label for="QID17A2" class="flex items-center cursor-pointer text-l">
+            <span class="w-4 h-4 inline-block mr-2 rounded-full border border-grey flex-no-shrink"></span>
+            Nineteen Eighty-Four
+          </label>
+        </div>
+        
+        <div class="flex items-center mr-4 mb-4">
+          <input id="QID17A3" type="radio" name="QID17" class="hidden" value="QID17A3" />
+          <label for="QID17A3" class="flex items-center cursor-pointer text-l">
+            <span class="w-4 h-4 inline-block mr-2 rounded-full border border-grey flex-no-shrink"></span>
+            A Clockwork Orange
+          </label>
+        </div>
+        
+        <div class="flex items-center mr-4 mb-4">
+          <input id="QID17A4" type="radio" name="QID17" class="hidden" value="QID17A4" />
+          <label for="QID17A4" class="flex items-center cursor-pointer text-l">
+            <span class="w-4 h-4 inline-block mr-2 rounded-full border border-grey flex-no-shrink"></span>
+            Never Let Me Go 
+          </label>
+        </div>
+        
+        <div class="flex items-center mr-4 mb-4">
+          <input id="QID17A5" type="radio" name="QID17" class="hidden" value="QID17A5" />
+          <label for="QID17A5" class="flex items-center cursor-pointer text-l">
+            <span class="w-4 h-4 inline-block mr-2 rounded-full border border-grey flex-no-shrink"></span>
+            Divergent
+          </label>
+        </div>
+        
+        </div>
+        
+        <div class="bg-gray-900 text-white radios-top p-4">
+          <p class="">Choose a film </p>
+        </div>
+        <div class="bg-gray-100 radios-main mb-4 p-2 pl-4">
+        <div class="flex items-center mr-4 mb-4">
+          <input id="QID18A1" type="radio" name="QID18" class="hidden" value="QID18A1" />
+          <label for="QID18A1" class="flex items-center cursor-pointer text-l">
+            <span class="w-4 h-4 inline-block mr-2 rounded-full border border-grey flex-no-shrink"></span>
+            Moonlight 
+          </label>
+        </div>
+        
+        <div class="flex items-center mr-4 mb-4">
+          <input id="QID18A2" type="radio" name="QID18" class="hidden" value="QID18A2" />
+          <label for="QID18A2" class="flex items-center cursor-pointer text-l">
+            <span class="w-4 h-4 inline-block mr-2 rounded-full border border-grey flex-no-shrink"></span>
+            Parasite 
+          </label>
+        </div>
+        
+        <div class="flex items-center mr-4 mb-4">
+          <input id="QID18A3" type="radio" name="QID18" class="hidden" value="QID18A3" />
+          <label for="QID18A3" class="flex items-center cursor-pointer text-l">
+            <span class="w-4 h-4 inline-block mr-2 rounded-full border border-grey flex-no-shrink"></span>
+            Mad Max: Fury Road
+          </label>
+        </div>
+        
+        <div class="flex items-center mr-4 mb-4">
+          <input id="QID18A4" type="radio" name="QID18" class="hidden" value="QID18A4" />
+          <label for="QID18A4" class="flex items-center cursor-pointer text-l">
+            <span class="w-4 h-4 inline-block mr-2 rounded-full border border-grey flex-no-shrink"></span>
+            The Godfather 
+          </label>
+        </div>
+        
+        <div class="flex items-center mr-4 mb-4">
+          <input id="QID18A5" type="radio" name="QID18" class="hidden" value="QID18A5" />
+          <label for="QID18A5" class="flex items-center cursor-pointer text-l">
+            <span class="w-4 h-4 inline-block mr-2 rounded-full border border-grey flex-no-shrink"></span>
+            Mean Girls 
+          </label>
+        </div>
+        
+        </div>
+        
+        <div class="bg-gray-900 text-white radios-top p-4">
+          <p class="">Which one would you throw in an open fire? </p>
+        </div>
+        <div class="bg-gray-100 radios-main mb-4 p-2 pl-4">
+        <div class="flex items-center mr-4 mb-4">
+          <input id="QID19A1" type="radio" name="QID19" class="hidden" value="QID19A1" />
+          <label for="QID19A1" class="flex items-center cursor-pointer text-l">
+            <span class="w-4 h-4 inline-block mr-2 rounded-full border border-grey flex-no-shrink"></span>
+            Ulysses 
+          </label>
+        </div>
+        
+        <div class="flex items-center mr-4 mb-4">
+          <input id="QID19A2" type="radio" name="QID19" class="hidden" value="QID19A2" />
+          <label for="QID19A2" class="flex items-center cursor-pointer text-l">
+            <span class="w-4 h-4 inline-block mr-2 rounded-full border border-grey flex-no-shrink"></span>
+            Moby Dick 
+          </label>
+        </div>
+        
+        <div class="flex items-center mr-4 mb-4">
+          <input id="QID19A3" type="radio" name="QID19" class="hidden" value="QID19A3" />
+          <label for="QID19A3" class="flex items-center cursor-pointer text-l">
+            <span class="w-4 h-4 inline-block mr-2 rounded-full border border-grey flex-no-shrink"></span>
+            Anna Karenina 
+          </label>
+        </div>
+        
+        <div class="flex items-center mr-4 mb-4">
+          <input id="QID19A4" type="radio" name="QID19" class="hidden" value="QID19A4" />
+          <label for="QID19A4" class="flex items-center cursor-pointer text-l">
+            <span class="w-4 h-4 inline-block mr-2 rounded-full border border-grey flex-no-shrink"></span>
+            Great Expectations 
+          </label>
+        </div>
+        
+        <div class="flex items-center mr-4 mb-4">
+          <input id="QID19A5" type="radio" name="QID19" class="hidden" value="QID19A5" />
+          <label for="QID19A5" class="flex items-center cursor-pointer text-l">
+            <span class="w-4 h-4 inline-block mr-2 rounded-full border border-grey flex-no-shrink"></span>
+            Twilight 
+          </label>
+        </div>
+        
+        </div>
+        
+        <div class="bg-gray-900 text-white radios-top p-4">
+          <p class="">Rank the Catcher in the Rye on a scale from 1 - 10 (1 being it’s SHIT, 10 being my favourite book) </p>
+        </div>
+        <div class="bg-gray-100 radios-main mb-4 p-2 pl-4">
+        <div class="flex items-center mr-4 mb-4">
+          <input id="QID20A1" type="radio" name="QID20" class="hidden" value="QID20A1" />
+          <label for="QID20A1" class="flex items-center cursor-pointer text-l">
+            <span class="w-4 h-4 inline-block mr-2 rounded-full border border-grey flex-no-shrink"></span>
+            1
+          </label>
+        </div>
+        
+        <div class="flex items-center mr-4 mb-4">
+          <input id="QID20A2" type="radio" name="QID20" class="hidden" value="QID20A2" />
+          <label for="QID20A2" class="flex items-center cursor-pointer text-l">
+            <span class="w-4 h-4 inline-block mr-2 rounded-full border border-grey flex-no-shrink"></span>
+            2
+          </label>
+        </div>
+        
+        <div class="flex items-center mr-4 mb-4">
+          <input id="QID20A3" type="radio" name="QID20" class="hidden" value="QID20A3" />
+          <label for="QID20A3" class="flex items-center cursor-pointer text-l">
+            <span class="w-4 h-4 inline-block mr-2 rounded-full border border-grey flex-no-shrink"></span>
+            3
+          </label>
+        </div>
+        
+        <div class="flex items-center mr-4 mb-4">
+          <input id="QID20A4" type="radio" name="QID20" class="hidden" value="QID20A4" />
+          <label for="QID20A4" class="flex items-center cursor-pointer text-l">
+            <span class="w-4 h-4 inline-block mr-2 rounded-full border border-grey flex-no-shrink"></span>
+            4
+          </label>
+        </div>
+        
+        <div class="flex items-center mr-4 mb-4">
+          <input id="QID20A5" type="radio" name="QID20" class="hidden" value="QID20A5" />
+          <label for="QID20A5" class="flex items-center cursor-pointer text-l">
+            <span class="w-4 h-4 inline-block mr-2 rounded-full border border-grey flex-no-shrink"></span>
+            5
+          </label>
+        </div>
+        
+        <div class="flex items-center mr-4 mb-4">
+          <input id="QID20A6" type="radio" name="QID20" class="hidden" value="QID20A6" />
+          <label for="QID20A6" class="flex items-center cursor-pointer text-l">
+            <span class="w-4 h-4 inline-block mr-2 rounded-full border border-grey flex-no-shrink"></span>
+            6
+          </label>
+        </div>
+        
+        <div class="flex items-center mr-4 mb-4">
+          <input id="QID20A7" type="radio" name="QID20" class="hidden" value="QID20A7" />
+          <label for="QID20A7" class="flex items-center cursor-pointer text-l">
+            <span class="w-4 h-4 inline-block mr-2 rounded-full border border-grey flex-no-shrink"></span>
+            7
+          </label>
+        </div>
+        
+        <div class="flex items-center mr-4 mb-4">
+          <input id="QID20A8" type="radio" name="QID20" class="hidden" value="QID20A8" />
+          <label for="QID20A8" class="flex items-center cursor-pointer text-l">
+            <span class="w-4 h-4 inline-block mr-2 rounded-full border border-grey flex-no-shrink"></span>
+            8
+          </label>
+        </div>
+        
+        <div class="flex items-center mr-4 mb-4">
+          <input id="QID20A9" type="radio" name="QID20" class="hidden" value="QID20A9" />
+          <label for="QID20A9" class="flex items-center cursor-pointer text-l">
+            <span class="w-4 h-4 inline-block mr-2 rounded-full border border-grey flex-no-shrink"></span>
+            9
+          </label>
+        </div>
+        
+        <div class="flex items-center mr-4 mb-4">
+          <input id="QID20A10" type="radio" name="QID20" class="hidden" value="QID20A10" />
+          <label for="QID20A10" class="flex items-center cursor-pointer text-l">
+            <span class="w-4 h-4 inline-block mr-2 rounded-full border border-grey flex-no-shrink"></span>
+            10
+          </label>
+        </div>
+        
+        <div class="flex items-center mr-4 mb-4">
+          <input id="QID20A11" type="radio" name="QID20" class="hidden" value="QID20A11" />
+          <label for="QID20A11" class="flex items-center cursor-pointer text-l">
+            <span class="w-4 h-4 inline-block mr-2 rounded-full border border-grey flex-no-shrink"></span>
+            I haven’t read it  
+          </label>
+        </div>
+        
+        </div>
+        
+        <div class="bg-gray-900 text-white radios-top p-4">
+          <p class="">What language would you love to learn? </p>
+        </div>
+        <div class="bg-gray-100 radios-main mb-4 p-2 pl-4">
+        <div class="flex items-center mr-4 mb-4">
+          <input id="QID21A1" type="radio" name="QID21" class="hidden" value="QID21A1" />
+          <label for="QID21A1" class="flex items-center cursor-pointer text-l">
+            <span class="w-4 h-4 inline-block mr-2 rounded-full border border-grey flex-no-shrink"></span>
+            Nepalese 
+          </label>
+        </div>
+        
+        <div class="flex items-center mr-4 mb-4">
+          <input id="QID21A2" type="radio" name="QID21" class="hidden" value="QID21A2" />
+          <label for="QID21A2" class="flex items-center cursor-pointer text-l">
+            <span class="w-4 h-4 inline-block mr-2 rounded-full border border-grey flex-no-shrink"></span>
+            Russian 
+          </label>
+        </div>
+        
+        <div class="flex items-center mr-4 mb-4">
+          <input id="QID21A3" type="radio" name="QID21" class="hidden" value="QID21A3" />
+          <label for="QID21A3" class="flex items-center cursor-pointer text-l">
+            <span class="w-4 h-4 inline-block mr-2 rounded-full border border-grey flex-no-shrink"></span>
+            Italian 
+          </label>
+        </div>
+        
+        <div class="flex items-center mr-4 mb-4">
+          <input id="QID21A4" type="radio" name="QID21" class="hidden" value="QID21A4" />
+          <label for="QID21A4" class="flex items-center cursor-pointer text-l">
+            <span class="w-4 h-4 inline-block mr-2 rounded-full border border-grey flex-no-shrink"></span>
+            Cantonese 
+          </label>
+        </div>
+        
+        <div class="flex items-center mr-4 mb-4">
+          <input id="QID21A5" type="radio" name="QID21" class="hidden" value="QID21A5" />
+          <label for="QID21A5" class="flex items-center cursor-pointer text-l">
+            <span class="w-4 h-4 inline-block mr-2 rounded-full border border-grey flex-no-shrink"></span>
+            German 
+          </label>
+        </div>
+        
+        </div>
+        
+        <div class="bg-gray-900 text-white radios-top p-4">
+          <p class="">What would be your ideal holiday? </p>
+        </div>
+        <div class="bg-gray-100 radios-main mb-4 p-2 pl-4">
+        <div class="flex items-center mr-4 mb-4">
+          <input id="QID22A1" type="radio" name="QID22" class="hidden" value="QID22A1" />
+          <label for="QID22A1" class="flex items-center cursor-pointer text-l">
+            <span class="w-4 h-4 inline-block mr-2 rounded-full border border-grey flex-no-shrink"></span>
+            Climbing Mt Fuji 
+          </label>
+        </div>
+        
+        <div class="flex items-center mr-4 mb-4">
+          <input id="QID22A2" type="radio" name="QID22" class="hidden" value="QID22A2" />
+          <label for="QID22A2" class="flex items-center cursor-pointer text-l">
+            <span class="w-4 h-4 inline-block mr-2 rounded-full border border-grey flex-no-shrink"></span>
+            Renting out a little cottage in rustic England like Kate Winslet  in ’The Holiday’
+          </label>
+        </div>
+        
+        <div class="flex items-center mr-4 mb-4">
+          <input id="QID22A3" type="radio" name="QID22" class="hidden" value="QID22A3" />
+          <label for="QID22A3" class="flex items-center cursor-pointer text-l">
+            <span class="w-4 h-4 inline-block mr-2 rounded-full border border-grey flex-no-shrink"></span>
+            FLORENCE, VENICE, ROME!!!
+          </label>
+        </div>
+        
+        <div class="flex items-center mr-4 mb-4">
+          <input id="QID22A4" type="radio" name="QID22" class="hidden" value="QID22A4" />
+          <label for="QID22A4" class="flex items-center cursor-pointer text-l">
+            <span class="w-4 h-4 inline-block mr-2 rounded-full border border-grey flex-no-shrink"></span>
+            The Sound of Music tour in Salzburg
+          </label>
+        </div>
+        
+        <div class="flex items-center mr-4 mb-4">
+          <input id="QID22A5" type="radio" name="QID22" class="hidden" value="QID22A5" />
+          <label for="QID22A5" class="flex items-center cursor-pointer text-l">
+            <span class="w-4 h-4 inline-block mr-2 rounded-full border border-grey flex-no-shrink"></span>
+            Reading all day at the beach. 
+          </label>
+        </div>
+        
+        </div>
+        
+        <div class="bg-gray-900 text-white radios-top p-4">
+          <p class="">Choose your favourite Poet?</p>
+        </div>
+        <div class="bg-gray-100 radios-main mb-4 p-2 pl-4">
+        <div class="flex items-center mr-4 mb-4">
+          <input id="QID23A1" type="radio" name="QID23" class="hidden" value="QID23A1" />
+          <label for="QID23A1" class="flex items-center cursor-pointer text-l">
+            <span class="w-4 h-4 inline-block mr-2 rounded-full border border-grey flex-no-shrink"></span>
+            Ocean Vuong 
+          </label>
+        </div>
+        
+        <div class="flex items-center mr-4 mb-4">
+          <input id="QID23A2" type="radio" name="QID23" class="hidden" value="QID23A2" />
+          <label for="QID23A2" class="flex items-center cursor-pointer text-l">
+            <span class="w-4 h-4 inline-block mr-2 rounded-full border border-grey flex-no-shrink"></span>
+            Walt Whitman 
+          </label>
+        </div>
+        
+        <div class="flex items-center mr-4 mb-4">
+          <input id="QID23A3" type="radio" name="QID23" class="hidden" value="QID23A3" />
+          <label for="QID23A3" class="flex items-center cursor-pointer text-l">
+            <span class="w-4 h-4 inline-block mr-2 rounded-full border border-grey flex-no-shrink"></span>
+            Emily Dickinson 
+          </label>
+        </div>
+        
+        <div class="flex items-center mr-4 mb-4">
+          <input id="QID23A4" type="radio" name="QID23" class="hidden" value="QID23A4" />
+          <label for="QID23A4" class="flex items-center cursor-pointer text-l">
+            <span class="w-4 h-4 inline-block mr-2 rounded-full border border-grey flex-no-shrink"></span>
+            Phillip Larkin 
+          </label>
+        </div>
+        
+        <div class="flex items-center mr-4 mb-4">
+          <input id="QID23A5" type="radio" name="QID23" class="hidden" value="QID23A5" />
+          <label for="QID23A5" class="flex items-center cursor-pointer text-l">
+            <span class="w-4 h-4 inline-block mr-2 rounded-full border border-grey flex-no-shrink"></span>
+            Frank O’hara
+          </label>
+        </div>
+        
+        </div>
+        
+        <div class="bg-gray-900 text-white radios-top p-4">
+          <p class="">Choose a Sport? </p>
+        </div>
+        <div class="bg-gray-100 radios-main mb-4 p-2 pl-4">
+        <div class="flex items-center mr-4 mb-4">
+          <input id="QID24A1" type="radio" name="QID24" class="hidden" value="QID24A1" />
+          <label for="QID24A1" class="flex items-center cursor-pointer text-l">
+            <span class="w-4 h-4 inline-block mr-2 rounded-full border border-grey flex-no-shrink"></span>
+            Badminton 
+          </label>
+        </div>
+        
+        <div class="flex items-center mr-4 mb-4">
+          <input id="QID24A2" type="radio" name="QID24" class="hidden" value="QID24A2" />
+          <label for="QID24A2" class="flex items-center cursor-pointer text-l">
+            <span class="w-4 h-4 inline-block mr-2 rounded-full border border-grey flex-no-shrink"></span>
+            Swimming 
+          </label>
+        </div>
+        
+        <div class="flex items-center mr-4 mb-4">
+          <input id="QID24A3" type="radio" name="QID24" class="hidden" value="QID24A3" />
+          <label for="QID24A3" class="flex items-center cursor-pointer text-l">
+            <span class="w-4 h-4 inline-block mr-2 rounded-full border border-grey flex-no-shrink"></span>
+            Figure Skating 
+          </label>
+        </div>
+        
+        <div class="flex items-center mr-4 mb-4">
+          <input id="QID24A4" type="radio" name="QID24" class="hidden" value="QID24A4" />
+          <label for="QID24A4" class="flex items-center cursor-pointer text-l">
+            <span class="w-4 h-4 inline-block mr-2 rounded-full border border-grey flex-no-shrink"></span>
+            Football (*rolling eye emoji*) 
+          </label>
+        </div>
+        
+        <div class="flex items-center mr-4 mb-4">
+          <input id="QID24A5" type="radio" name="QID24" class="hidden" value="QID24A5" />
+          <label for="QID24A5" class="flex items-center cursor-pointer text-l">
+            <span class="w-4 h-4 inline-block mr-2 rounded-full border border-grey flex-no-shrink"></span>
+            The fuck is sports
+          </label>
+        </div>
+        
+        </div>
+        
+        <div class="bg-gray-900 text-white radios-top p-4">
+          <p class="">Choose a Romantic Poet you would snog? </p>
+        </div>
+        <div class="bg-gray-100 radios-main mb-4 p-2 pl-4">
+        <div class="flex items-center mr-4 mb-4">
+          <input id="QID25A1" type="radio" name="QID25" class="hidden" value="QID25A1" />
+          <label for="QID25A1" class="flex items-center cursor-pointer text-l">
+            <span class="w-4 h-4 inline-block mr-2 rounded-full border border-grey flex-no-shrink"></span>
+            Keats
+          </label>
+        </div>
+        
+        <div class="flex items-center mr-4 mb-4">
+          <input id="QID25A2" type="radio" name="QID25" class="hidden" value="QID25A2" />
+          <label for="QID25A2" class="flex items-center cursor-pointer text-l">
+            <span class="w-4 h-4 inline-block mr-2 rounded-full border border-grey flex-no-shrink"></span>
+            Blake 
+          </label>
+        </div>
+        
+        <div class="flex items-center mr-4 mb-4">
+          <input id="QID25A3" type="radio" name="QID25" class="hidden" value="QID25A3" />
+          <label for="QID25A3" class="flex items-center cursor-pointer text-l">
+            <span class="w-4 h-4 inline-block mr-2 rounded-full border border-grey flex-no-shrink"></span>
+            Byron 
+          </label>
+        </div>
+        
+        <div class="flex items-center mr-4 mb-4">
+          <input id="QID25A4" type="radio" name="QID25" class="hidden" value="QID25A4" />
+          <label for="QID25A4" class="flex items-center cursor-pointer text-l">
+            <span class="w-4 h-4 inline-block mr-2 rounded-full border border-grey flex-no-shrink"></span>
+            Coleridge 
+          </label>
+        </div>
+        
+        <div class="flex items-center mr-4 mb-4">
+          <input id="QID25A5" type="radio" name="QID25" class="hidden" value="QID25A5" />
+          <label for="QID25A5" class="flex items-center cursor-pointer text-l">
+            <span class="w-4 h-4 inline-block mr-2 rounded-full border border-grey flex-no-shrink"></span>
+            None cus they’re gross
+          </label>
+        </div>
+        
+        </div>
+        
+        <div class="bg-gray-900 text-white radios-top p-4">
+          <p class="">Which of these themed parties appeals to you most? </p>
+        </div>
+        <div class="bg-gray-100 radios-main mb-4 p-2 pl-4">
+        <div class="flex items-center mr-4 mb-4">
+          <input id="QID26A1" type="radio" name="QID26" class="hidden" value="QID26A1" />
+          <label for="QID26A1" class="flex items-center cursor-pointer text-l">
+            <span class="w-4 h-4 inline-block mr-2 rounded-full border border-grey flex-no-shrink"></span>
+            Tarantino themed 
+          </label>
+        </div>
+        
+        <div class="flex items-center mr-4 mb-4">
+          <input id="QID26A2" type="radio" name="QID26" class="hidden" value="QID26A2" />
+          <label for="QID26A2" class="flex items-center cursor-pointer text-l">
+            <span class="w-4 h-4 inline-block mr-2 rounded-full border border-grey flex-no-shrink"></span>
+            Brexit memes and Rugby Tees 
+          </label>
+        </div>
+        
+        <div class="flex items-center mr-4 mb-4">
+          <input id="QID26A3" type="radio" name="QID26" class="hidden" value="QID26A3" />
+          <label for="QID26A3" class="flex items-center cursor-pointer text-l">
+            <span class="w-4 h-4 inline-block mr-2 rounded-full border border-grey flex-no-shrink"></span>
+            Feminist Icons 
+          </label>
+        </div>
+        
+        <div class="flex items-center mr-4 mb-4">
+          <input id="QID26A4" type="radio" name="QID26" class="hidden" value="QID26A4" />
+          <label for="QID26A4" class="flex items-center cursor-pointer text-l">
+            <span class="w-4 h-4 inline-block mr-2 rounded-full border border-grey flex-no-shrink"></span>
+            Britney Spears 
+          </label>
+        </div>
+        
+        <div class="flex items-center mr-4 mb-4">
+          <input id="QID26A5" type="radio" name="QID26" class="hidden" value="QID26A5" />
+          <label for="QID26A5" class="flex items-center cursor-pointer text-l">
+            <span class="w-4 h-4 inline-block mr-2 rounded-full border border-grey flex-no-shrink"></span>
+            Milk and Honey
+          </label>
+        </div>
+        
+        </div>
+        
+        <div class="bg-gray-900 text-white radios-top p-4">
+          <p class="">Do you watch Gilmore Girls </p>
+        </div>
+        <div class="bg-gray-100 radios-main mb-4 p-2 pl-4">
+        <div class="flex items-center mr-4 mb-4">
+          <input id="QID27A1" type="radio" name="QID27" class="hidden" value="QID27A1" />
+          <label for="QID27A1" class="flex items-center cursor-pointer text-l">
+            <span class="w-4 h-4 inline-block mr-2 rounded-full border border-grey flex-no-shrink"></span>
+            Yes
+          </label>
+        </div>
+        
+        <div class="flex items-center mr-4 mb-4">
+          <input id="QID27A2" type="radio" name="QID27" class="hidden" value="QID27A2" />
+          <label for="QID27A2" class="flex items-center cursor-pointer text-l">
+            <span class="w-4 h-4 inline-block mr-2 rounded-full border border-grey flex-no-shrink"></span>
+            No 
+          </label>
+        </div>
+        
+        </div>
+        
+        <div class="bg-gray-900 text-white radios-top p-4">
+          <p class="">Which Austen Heroine do you most relate to?</p>
+        </div>
+        <div class="bg-gray-100 radios-main mb-4 p-2 pl-4">
+        <div class="flex items-center mr-4 mb-4">
+          <input id="QID28A1" type="radio" name="QID28" class="hidden" value="QID28A1" />
+          <label for="QID28A1" class="flex items-center cursor-pointer text-l">
+            <span class="w-4 h-4 inline-block mr-2 rounded-full border border-grey flex-no-shrink"></span>
+            Lizi Bennett
+          </label>
+        </div>
+        
+        <div class="flex items-center mr-4 mb-4">
+          <input id="QID28A2" type="radio" name="QID28" class="hidden" value="QID28A2" />
+          <label for="QID28A2" class="flex items-center cursor-pointer text-l">
+            <span class="w-4 h-4 inline-block mr-2 rounded-full border border-grey flex-no-shrink"></span>
+            Emma Woodhouse 
+          </label>
+        </div>
+        
+        <div class="flex items-center mr-4 mb-4">
+          <input id="QID28A3" type="radio" name="QID28" class="hidden" value="QID28A3" />
+          <label for="QID28A3" class="flex items-center cursor-pointer text-l">
+            <span class="w-4 h-4 inline-block mr-2 rounded-full border border-grey flex-no-shrink"></span>
+            Marianne Dashwood
+          </label>
+        </div>
+        
+        <div class="flex items-center mr-4 mb-4">
+          <input id="QID28A4" type="radio" name="QID28" class="hidden" value="QID28A4" />
+          <label for="QID28A4" class="flex items-center cursor-pointer text-l">
+            <span class="w-4 h-4 inline-block mr-2 rounded-full border border-grey flex-no-shrink"></span>
+            Anne Elliot 
+          </label>
+        </div>
+        
+        <div class="flex items-center mr-4 mb-4">
+          <input id="QID28A5" type="radio" name="QID28" class="hidden" value="QID28A5" />
+          <label for="QID28A5" class="flex items-center cursor-pointer text-l">
+            <span class="w-4 h-4 inline-block mr-2 rounded-full border border-grey flex-no-shrink"></span>
+            I don’t know what you’re on about
+          </label>
+        </div>
+        
+        </div>
+        
+        <div class="bg-gray-900 text-white radios-top p-4">
+          <p class="">Choose your Girl Group? </p>
+        </div>
+        <div class="bg-gray-100 radios-main mb-4 p-2 pl-4">
+        <div class="flex items-center mr-4 mb-4">
+          <input id="QID30A1" type="radio" name="QID30" class="hidden" value="QID30A1" />
+          <label for="QID30A1" class="flex items-center cursor-pointer text-l">
+            <span class="w-4 h-4 inline-block mr-2 rounded-full border border-grey flex-no-shrink"></span>
+            Girl’s Generation
+          </label>
+        </div>
+        
+        <div class="flex items-center mr-4 mb-4">
+          <input id="QID30A2" type="radio" name="QID30" class="hidden" value="QID30A2" />
+          <label for="QID30A2" class="flex items-center cursor-pointer text-l">
+            <span class="w-4 h-4 inline-block mr-2 rounded-full border border-grey flex-no-shrink"></span>
+            Spice Girls
+          </label>
+        </div>
+        
+        <div class="flex items-center mr-4 mb-4">
+          <input id="QID30A3" type="radio" name="QID30" class="hidden" value="QID30A3" />
+          <label for="QID30A3" class="flex items-center cursor-pointer text-l">
+            <span class="w-4 h-4 inline-block mr-2 rounded-full border border-grey flex-no-shrink"></span>
+            The Saturdays 
+          </label>
+        </div>
+        
+        <div class="flex items-center mr-4 mb-4">
+          <input id="QID30A4" type="radio" name="QID30" class="hidden" value="QID30A4" />
+          <label for="QID30A4" class="flex items-center cursor-pointer text-l">
+            <span class="w-4 h-4 inline-block mr-2 rounded-full border border-grey flex-no-shrink"></span>
+            Blackpink 
+          </label>
+        </div>
+        
+        <div class="flex items-center mr-4 mb-4">
+          <input id="QID30A5" type="radio" name="QID30" class="hidden" value="QID30A5" />
+          <label for="QID30A5" class="flex items-center cursor-pointer text-l">
+            <span class="w-4 h-4 inline-block mr-2 rounded-full border border-grey flex-no-shrink"></span>
+            The Supremes
+          </label>
+        </div>
+        
+        </div>
+        
+        <div class="bg-gray-900 text-white radios-top p-4">
+          <p class="">Choose your Boy Band? </p>
+        </div>
+        <div class="bg-gray-100 radios-main mb-4 p-2 pl-4">
+        <div class="flex items-center mr-4 mb-4">
+          <input id="QID31A1" type="radio" name="QID31" class="hidden" value="QID31A1" />
+          <label for="QID31A1" class="flex items-center cursor-pointer text-l">
+            <span class="w-4 h-4 inline-block mr-2 rounded-full border border-grey flex-no-shrink"></span>
+            One Direction
+          </label>
+        </div>
+        
+        <div class="flex items-center mr-4 mb-4">
+          <input id="QID31A2" type="radio" name="QID31" class="hidden" value="QID31A2" />
+          <label for="QID31A2" class="flex items-center cursor-pointer text-l">
+            <span class="w-4 h-4 inline-block mr-2 rounded-full border border-grey flex-no-shrink"></span>
+            *NSync
+          </label>
+        </div>
+        
+        <div class="flex items-center mr-4 mb-4">
+          <input id="QID31A3" type="radio" name="QID31" class="hidden" value="QID31A3" />
+          <label for="QID31A3" class="flex items-center cursor-pointer text-l">
+            <span class="w-4 h-4 inline-block mr-2 rounded-full border border-grey flex-no-shrink"></span>
+            BTS 
+          </label>
+        </div>
+        
+        <div class="flex items-center mr-4 mb-4">
+          <input id="QID31A4" type="radio" name="QID31" class="hidden" value="QID31A4" />
+          <label for="QID31A4" class="flex items-center cursor-pointer text-l">
+            <span class="w-4 h-4 inline-block mr-2 rounded-full border border-grey flex-no-shrink"></span>
+            The Beatles
+          </label>
+        </div>
+        
+        <div class="flex items-center mr-4 mb-4">
+          <input id="QID31A5" type="radio" name="QID31" class="hidden" value="QID31A5" />
+          <label for="QID31A5" class="flex items-center cursor-pointer text-l">
+            <span class="w-4 h-4 inline-block mr-2 rounded-full border border-grey flex-no-shrink"></span>
+            Super Junior 
+          </label>
+        </div>
+        
+        </div>
+        
+        <div class="bg-gray-900 text-white radios-top p-4">
+          <p class="">What would you like to show your match about Oxford/ what would you most like to see about Oxford?</p>
+        </div>
+        <div class="bg-gray-100 radios-main mb-4 p-2 pl-4">
+        <div class="flex items-center mr-4 mb-4">
+          <input id="QID32A1" type="radio" name="QID32" class="hidden" value="QID32A1" />
+          <label for="QID32A1" class="flex items-center cursor-pointer text-l">
+            <span class="w-4 h-4 inline-block mr-2 rounded-full border border-grey flex-no-shrink"></span>
+            The different colleges 
+          </label>
+        </div>
+        
+        <div class="flex items-center mr-4 mb-4">
+          <input id="QID32A2" type="radio" name="QID32" class="hidden" value="QID32A2" />
+          <label for="QID32A2" class="flex items-center cursor-pointer text-l">
+            <span class="w-4 h-4 inline-block mr-2 rounded-full border border-grey flex-no-shrink"></span>
+            Port Meadow at sunrise with all of the horses 
+          </label>
+        </div>
+        
+        <div class="flex items-center mr-4 mb-4">
+          <input id="QID32A3" type="radio" name="QID32" class="hidden" value="QID32A3" />
+          <label for="QID32A3" class="flex items-center cursor-pointer text-l">
+            <span class="w-4 h-4 inline-block mr-2 rounded-full border border-grey flex-no-shrink"></span>
+            Inside of the Radcliffe Camera and the intense students 
+          </label>
+        </div>
+        
+        <div class="flex items-center mr-4 mb-4">
+          <input id="QID32A4" type="radio" name="QID32" class="hidden" value="QID32A4" />
+          <label for="QID32A4" class="flex items-center cursor-pointer text-l">
+            <span class="w-4 h-4 inline-block mr-2 rounded-full border border-grey flex-no-shrink"></span>
+            Cowley Road 
+          </label>
+        </div>
+        
+        <div class="flex items-center mr-4 mb-4">
+          <input id="QID32A5" type="radio" name="QID32" class="hidden" value="QID32A5" />
+          <label for="QID32A5" class="flex items-center cursor-pointer text-l">
+            <span class="w-4 h-4 inline-block mr-2 rounded-full border border-grey flex-no-shrink"></span>
+            Park End
+          </label>
+        </div>
+        
+        </div>
+        
+        <div class="bg-gray-900 text-white radios-top p-4">
+          <p class="">What would you like to show your match about New York/ what would you most like to see about New York?</p>
+        </div>
+        <div class="bg-gray-100 radios-main mb-4 p-2 pl-4">
+        <div class="flex items-center mr-4 mb-4">
+          <input id="QID33A1" type="radio" name="QID33" class="hidden" value="QID33A1" />
+          <label for="QID33A1" class="flex items-center cursor-pointer text-l">
+            <span class="w-4 h-4 inline-block mr-2 rounded-full border border-grey flex-no-shrink"></span>
+            Famous Fat Dave"s Food Tours 
+          </label>
+        </div>
+        
+        <div class="flex items-center mr-4 mb-4">
+          <input id="QID33A2" type="radio" name="QID33" class="hidden" value="QID33A2" />
+          <label for="QID33A2" class="flex items-center cursor-pointer text-l">
+            <span class="w-4 h-4 inline-block mr-2 rounded-full border border-grey flex-no-shrink"></span>
+            Visit the Empire State Building (bit touristy but some of us never been)
+          </label>
+        </div>
+        
+        <div class="flex items-center mr-4 mb-4">
+          <input id="QID33A3" type="radio" name="QID33" class="hidden" value="QID33A3" />
+          <label for="QID33A3" class="flex items-center cursor-pointer text-l">
+            <span class="w-4 h-4 inline-block mr-2 rounded-full border border-grey flex-no-shrink"></span>
+            A Broadway show (a little pricey)
+          </label>
+        </div>
+        
+        <div class="flex items-center mr-4 mb-4">
+          <input id="QID33A4" type="radio" name="QID33" class="hidden" value="QID33A4" />
+          <label for="QID33A4" class="flex items-center cursor-pointer text-l">
+            <span class="w-4 h-4 inline-block mr-2 rounded-full border border-grey flex-no-shrink"></span>
+            Visit all the places in Sex and the City 
+          </label>
+        </div>
+        
+        <div class="flex items-center mr-4 mb-4">
+          <input id="QID33A5" type="radio" name="QID33" class="hidden" value="QID33A5" />
+          <label for="QID33A5" class="flex items-center cursor-pointer text-l">
+            <span class="w-4 h-4 inline-block mr-2 rounded-full border border-grey flex-no-shrink"></span>
+            The NYU campuses
+          </label>
+        </div>
+        
+        </div>
+        
+        <div class="bg-gray-900 text-white radios-top p-4">
+          <p class="">Choose your Avatar element?</p>
+        </div>
+        <div class="bg-gray-100 radios-main mb-4 p-2 pl-4">
+        <div class="flex items-center mr-4 mb-4">
+          <input id="QID34A1" type="radio" name="QID34" class="hidden" value="QID34A1" />
+          <label for="QID34A1" class="flex items-center cursor-pointer text-l">
+            <span class="w-4 h-4 inline-block mr-2 rounded-full border border-grey flex-no-shrink"></span>
+            Water
+          </label>
+        </div>
+        
+        <div class="flex items-center mr-4 mb-4">
+          <input id="QID34A2" type="radio" name="QID34" class="hidden" value="QID34A2" />
+          <label for="QID34A2" class="flex items-center cursor-pointer text-l">
+            <span class="w-4 h-4 inline-block mr-2 rounded-full border border-grey flex-no-shrink"></span>
+            Fire
+          </label>
+        </div>
+        
+        <div class="flex items-center mr-4 mb-4">
+          <input id="QID34A3" type="radio" name="QID34" class="hidden" value="QID34A3" />
+          <label for="QID34A3" class="flex items-center cursor-pointer text-l">
+            <span class="w-4 h-4 inline-block mr-2 rounded-full border border-grey flex-no-shrink"></span>
+            Earth 
+          </label>
+        </div>
+        
+        <div class="flex items-center mr-4 mb-4">
+          <input id="QID34A4" type="radio" name="QID34" class="hidden" value="QID34A4" />
+          <label for="QID34A4" class="flex items-center cursor-pointer text-l">
+            <span class="w-4 h-4 inline-block mr-2 rounded-full border border-grey flex-no-shrink"></span>
+            Air
+          </label>
+        </div>
+        
+        <div class="flex items-center mr-4 mb-4">
+          <input id="QID34A5" type="radio" name="QID34" class="hidden" value="QID34A5" />
+          <label for="QID34A5" class="flex items-center cursor-pointer text-l">
+            <span class="w-4 h-4 inline-block mr-2 rounded-full border border-grey flex-no-shrink"></span>
+            Non-bender
+          </label>
+        </div>
+        
+        </div>
+        
+        <div class="bg-gray-900 text-white radios-top p-4">
+          <p class="">Which city would you most like to live in?</p>
+        </div>
+        <div class="bg-gray-100 radios-main mb-4 p-2 pl-4">
+        <div class="flex items-center mr-4 mb-4">
+          <input id="QID35A1" type="radio" name="QID35" class="hidden" value="QID35A1" />
+          <label for="QID35A1" class="flex items-center cursor-pointer text-l">
+            <span class="w-4 h-4 inline-block mr-2 rounded-full border border-grey flex-no-shrink"></span>
+            Berlin 
+          </label>
+        </div>
+        
+        <div class="flex items-center mr-4 mb-4">
+          <input id="QID35A2" type="radio" name="QID35" class="hidden" value="QID35A2" />
+          <label for="QID35A2" class="flex items-center cursor-pointer text-l">
+            <span class="w-4 h-4 inline-block mr-2 rounded-full border border-grey flex-no-shrink"></span>
+            Seoul 
+          </label>
+        </div>
+        
+        <div class="flex items-center mr-4 mb-4">
+          <input id="QID35A3" type="radio" name="QID35" class="hidden" value="QID35A3" />
+          <label for="QID35A3" class="flex items-center cursor-pointer text-l">
+            <span class="w-4 h-4 inline-block mr-2 rounded-full border border-grey flex-no-shrink"></span>
+            Paris 
+          </label>
+        </div>
+        
+        <div class="flex items-center mr-4 mb-4">
+          <input id="QID35A4" type="radio" name="QID35" class="hidden" value="QID35A4" />
+          <label for="QID35A4" class="flex items-center cursor-pointer text-l">
+            <span class="w-4 h-4 inline-block mr-2 rounded-full border border-grey flex-no-shrink"></span>
+            New York 
+          </label>
+        </div>
+        
+        <div class="flex items-center mr-4 mb-4">
+          <input id="QID35A5" type="radio" name="QID35" class="hidden" value="QID35A5" />
+          <label for="QID35A5" class="flex items-center cursor-pointer text-l">
+            <span class="w-4 h-4 inline-block mr-2 rounded-full border border-grey flex-no-shrink"></span>
+            City? I’m a cottage whore
+          </label>
+        </div>
+        
+        </div>
+        
+        <div class="bg-gray-900 text-white radios-top p-4">
+          <p class="">Pick a present to give your match</p>
+        </div>
+        <div class="bg-gray-100 radios-main mb-4 p-2 pl-4">
+        <div class="flex items-center mr-4 mb-4">
+          <input id="QID36A1" type="radio" name="QID36" class="hidden" value="QID36A1" />
+          <label for="QID36A1" class="flex items-center cursor-pointer text-l">
+            <span class="w-4 h-4 inline-block mr-2 rounded-full border border-grey flex-no-shrink"></span>
+            A bouquet of roses
+          </label>
+        </div>
+        
+        <div class="flex items-center mr-4 mb-4">
+          <input id="QID36A2" type="radio" name="QID36" class="hidden" value="QID36A2" />
+          <label for="QID36A2" class="flex items-center cursor-pointer text-l">
+            <span class="w-4 h-4 inline-block mr-2 rounded-full border border-grey flex-no-shrink"></span>
+            A fancy journal
+          </label>
+        </div>
+        
+        <div class="flex items-center mr-4 mb-4">
+          <input id="QID36A3" type="radio" name="QID36" class="hidden" value="QID36A3" />
+          <label for="QID36A3" class="flex items-center cursor-pointer text-l">
+            <span class="w-4 h-4 inline-block mr-2 rounded-full border border-grey flex-no-shrink"></span>
+            Chicken nuggets
+          </label>
+        </div>
+        
+        <div class="flex items-center mr-4 mb-4">
+          <input id="QID36A4" type="radio" name="QID36" class="hidden" value="QID36A4" />
+          <label for="QID36A4" class="flex items-center cursor-pointer text-l">
+            <span class="w-4 h-4 inline-block mr-2 rounded-full border border-grey flex-no-shrink"></span>
+            A gift card
+          </label>
+        </div>
+        
+        <div class="flex items-center mr-4 mb-4">
+          <input id="QID36A5" type="radio" name="QID36" class="hidden" value="QID36A5" />
+          <label for="QID36A5" class="flex items-center cursor-pointer text-l">
+            <span class="w-4 h-4 inline-block mr-2 rounded-full border border-grey flex-no-shrink"></span>
+            Champagne
+          </label>
+        </div>
+        
+        </div>
+        
+        <div class="bg-gray-900 text-white radios-top p-4">
+          <p class="">Pick a Y2K aesthetic</p>
+        </div>
+        <div class="bg-gray-100 radios-main mb-4 p-2 pl-4">
+        <div class="flex items-center mr-4 mb-4">
+          <input id="QID37A1" type="radio" name="QID37" class="hidden" value="QID37A1" />
+          <label for="QID37A1" class="flex items-center cursor-pointer text-l">
+            <span class="w-4 h-4 inline-block mr-2 rounded-full border border-grey flex-no-shrink"></span>
+            Matrix leather
+          </label>
+        </div>
+        
+        <div class="flex items-center mr-4 mb-4">
+          <input id="QID37A2" type="radio" name="QID37" class="hidden" value="QID37A2" />
+          <label for="QID37A2" class="flex items-center cursor-pointer text-l">
+            <span class="w-4 h-4 inline-block mr-2 rounded-full border border-grey flex-no-shrink"></span>
+            Low-rise jeans with thong
+          </label>
+        </div>
+        
+        <div class="flex items-center mr-4 mb-4">
+          <input id="QID37A3" type="radio" name="QID37" class="hidden" value="QID37A3" />
+          <label for="QID37A3" class="flex items-center cursor-pointer text-l">
+            <span class="w-4 h-4 inline-block mr-2 rounded-full border border-grey flex-no-shrink"></span>
+            Juicy Couture velour tracksuit
+          </label>
+        </div>
+        
+        <div class="flex items-center mr-4 mb-4">
+          <input id="QID37A4" type="radio" name="QID37" class="hidden" value="QID37A4" />
+          <label for="QID37A4" class="flex items-center cursor-pointer text-l">
+            <span class="w-4 h-4 inline-block mr-2 rounded-full border border-grey flex-no-shrink"></span>
+            Mall goth
+          </label>
+        </div>
+        
+        <div class="flex items-center mr-4 mb-4">
+          <input id="QID37A5" type="radio" name="QID37" class="hidden" value="QID37A5" />
+          <label for="QID37A5" class="flex items-center cursor-pointer text-l">
+            <span class="w-4 h-4 inline-block mr-2 rounded-full border border-grey flex-no-shrink"></span>
+            I just want 80’s nostalgia back
+          </label>
+        </div>
+        
+        </div>
+        
+        <div class="bg-gray-900 text-white radios-top p-4">
+          <p class="">Hottest major?</p>
+        </div>
+        <div class="bg-gray-100 radios-main mb-4 p-2 pl-4">
+        <div class="flex items-center mr-4 mb-4">
+          <input id="QID38A1" type="radio" name="QID38" class="hidden" value="QID38A1" />
+          <label for="QID38A1" class="flex items-center cursor-pointer text-l">
+            <span class="w-4 h-4 inline-block mr-2 rounded-full border border-grey flex-no-shrink"></span>
+            English lit
+          </label>
+        </div>
+        
+        <div class="flex items-center mr-4 mb-4">
+          <input id="QID38A2" type="radio" name="QID38" class="hidden" value="QID38A2" />
+          <label for="QID38A2" class="flex items-center cursor-pointer text-l">
+            <span class="w-4 h-4 inline-block mr-2 rounded-full border border-grey flex-no-shrink"></span>
+            Physics
+          </label>
+        </div>
+        
+        <div class="flex items-center mr-4 mb-4">
+          <input id="QID38A3" type="radio" name="QID38" class="hidden" value="QID38A3" />
+          <label for="QID38A3" class="flex items-center cursor-pointer text-l">
+            <span class="w-4 h-4 inline-block mr-2 rounded-full border border-grey flex-no-shrink"></span>
+            Econ
+          </label>
+        </div>
+        
+        <div class="flex items-center mr-4 mb-4">
+          <input id="QID38A4" type="radio" name="QID38" class="hidden" value="QID38A4" />
+          <label for="QID38A4" class="flex items-center cursor-pointer text-l">
+            <span class="w-4 h-4 inline-block mr-2 rounded-full border border-grey flex-no-shrink"></span>
+            Law
+          </label>
+        </div>
+        
+        <div class="flex items-center mr-4 mb-4">
+          <input id="QID38A5" type="radio" name="QID38" class="hidden" value="QID38A5" />
+          <label for="QID38A5" class="flex items-center cursor-pointer text-l">
+            <span class="w-4 h-4 inline-block mr-2 rounded-full border border-grey flex-no-shrink"></span>
+            Philosophy
+          </label>
+        </div>
+        
+        </div>
+        
+        <div class="bg-gray-900 text-white radios-top p-4">
+          <p class="">Pick a woman from history</p>
+        </div>
+        <div class="bg-gray-100 radios-main mb-4 p-2 pl-4">
+        <div class="flex items-center mr-4 mb-4">
+          <input id="QID39A1" type="radio" name="QID39" class="hidden" value="QID39A1" />
+          <label for="QID39A1" class="flex items-center cursor-pointer text-l">
+            <span class="w-4 h-4 inline-block mr-2 rounded-full border border-grey flex-no-shrink"></span>
+            Catherine the Great
+          </label>
+        </div>
+        
+        <div class="flex items-center mr-4 mb-4">
+          <input id="QID39A2" type="radio" name="QID39" class="hidden" value="QID39A2" />
+          <label for="QID39A2" class="flex items-center cursor-pointer text-l">
+            <span class="w-4 h-4 inline-block mr-2 rounded-full border border-grey flex-no-shrink"></span>
+            Queen Elizabeth I
+          </label>
+        </div>
+        
+        <div class="flex items-center mr-4 mb-4">
+          <input id="QID39A3" type="radio" name="QID39" class="hidden" value="QID39A3" />
+          <label for="QID39A3" class="flex items-center cursor-pointer text-l">
+            <span class="w-4 h-4 inline-block mr-2 rounded-full border border-grey flex-no-shrink"></span>
+            Boudicca
+          </label>
+        </div>
+        
+        <div class="flex items-center mr-4 mb-4">
+          <input id="QID39A4" type="radio" name="QID39" class="hidden" value="QID39A4" />
+          <label for="QID39A4" class="flex items-center cursor-pointer text-l">
+            <span class="w-4 h-4 inline-block mr-2 rounded-full border border-grey flex-no-shrink"></span>
+            Harriet Tubman
+          </label>
+        </div>
+        
+        <div class="flex items-center mr-4 mb-4">
+          <input id="QID39A5" type="radio" name="QID39" class="hidden" value="QID39A5" />
+          <label for="QID39A5" class="flex items-center cursor-pointer text-l">
+            <span class="w-4 h-4 inline-block mr-2 rounded-full border border-grey flex-no-shrink"></span>
+            Ching Shih
+          </label>
+        </div>
+        
+        </div>
+        
+        <div class="bg-gray-900 text-white radios-top p-4">
+          <p class="">What type of PenPal are you looking for? </p>
+        </div>
+        <div class="bg-gray-100 radios-main mb-4 p-2 pl-4">
+        <div class="flex items-center mr-4 mb-4">
+          <input id="QID42A1" type="radio" name="QID42" class="hidden" value="QID42A1" />
+          <label for="QID42A1" class="flex items-center cursor-pointer text-l">
+            <span class="w-4 h-4 inline-block mr-2 rounded-full border border-grey flex-no-shrink"></span>
+            I want cutting critique 
+          </label>
+        </div>
+        
+        <div class="flex items-center mr-4 mb-4">
+          <input id="QID42A2" type="radio" name="QID42" class="hidden" value="QID42A2" />
+          <label for="QID42A2" class="flex items-center cursor-pointer text-l">
+            <span class="w-4 h-4 inline-block mr-2 rounded-full border border-grey flex-no-shrink"></span>
+            Just some light feedback 
+          </label>
+        </div>
+        
+        <div class="flex items-center mr-4 mb-4">
+          <input id="QID42A3" type="radio" name="QID42" class="hidden" value="QID42A3" />
+          <label for="QID42A3" class="flex items-center cursor-pointer text-l">
+            <span class="w-4 h-4 inline-block mr-2 rounded-full border border-grey flex-no-shrink"></span>
+            More of a friend
+          </label>
+        </div>
+        
+        </div>
+        
+        <div class="bg-gray-900 text-white radios-top p-4">
+          <p class="">What are your thoughts on the Oxford comma</p>
+        </div>
+        <div class="bg-gray-100 radios-main mb-4 p-2 pl-4">
+        <div class="flex items-center mr-4 mb-4">
+          <input id="QID43A1" type="radio" name="QID43" class="hidden" value="QID43A1" />
+          <label for="QID43A1" class="flex items-center cursor-pointer text-l">
+            <span class="w-4 h-4 inline-block mr-2 rounded-full border border-grey flex-no-shrink"></span>
+            Yay
+          </label>
+        </div>
+        
+        <div class="flex items-center mr-4 mb-4">
+          <input id="QID43A2" type="radio" name="QID43" class="hidden" value="QID43A2" />
+          <label for="QID43A2" class="flex items-center cursor-pointer text-l">
+            <span class="w-4 h-4 inline-block mr-2 rounded-full border border-grey flex-no-shrink"></span>
+            Nay 
+          </label>
+        </div>
+        
+        </div>
+        
+        
+        
+        
+        
       <!--<input class="bg-gray-100 text-white p-2 h-10 mb-4" type="text" name="amount" placeholder="Amount">-->
 
       <div id="card-element" class="bg-gray-100 border-solid border-2 rounded border-gray-200 p-2 h-10 mb-4"></div>

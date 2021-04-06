@@ -28,6 +28,38 @@ var con = mysql.createConnection({
 app.post("/charge", (req, res) => {
   try {
     var name = req.body.name;
+    var QID7 = req.body.QID7;
+    var QID5 = req.body.QID5;
+		var QID7 = req.body.QID7;
+		var QID8 = req.body.QID8;
+		var QID9 = req.body.QID9;
+		var QID14 = req.body.QID14;
+		var QID16 = req.body.QID16;
+		var QID17 = req.body.QID17;
+		var QID18 = req.body.QID18;
+		var QID19 = req.body.QID19;
+		var QID20 = req.body.QID20;
+		var QID21 = req.body.QID21;
+		var QID22 = req.body.QID22;
+		var QID23 = req.body.QID23;
+		var QID24 = req.body.QID24;
+		var QID25 = req.body.QID25;
+		var QID26 = req.body.QID26;
+		var QID27 = req.body.QID27;
+		var QID28 = req.body.QID28;
+		var QID30 = req.body.QID30;
+		var QID31 = req.body.QID31;
+		var QID32 = req.body.QID32;
+		var QID33 = req.body.QID33;
+		var QID34 = req.body.QID34;
+		var QID35 = req.body.QID35;
+		var QID36 = req.body.QID36;
+		var QID37 = req.body.QID37;
+		var QID38 = req.body.QID38;
+		var QID39 = req.body.QID39;
+		var QID42 = req.body.QID42;
+		var QID43 = req.body.QID43;
+
     stripe.customers
       .create({
         name: req.body.name,
@@ -45,7 +77,7 @@ app.post("/charge", (req, res) => {
       .then(() => res.render("completed.html"))
       .catch(err => console.log(err));
     var university = req.body.university;
-    var sql = "INSERT INTO deets (name, email, age, university) VALUES ('" + name + "', 'fjrennie1@outlook.com', 19, '" + university + "')";
+    var sql = "INSERT INTO deets (name, email, age, university, QID7, QID8, QID9, QID14, QID16, QID17, QID18, QID19, QID20, QID21, QID22, QID23, QID24, QID25, QID26, QID27, QID28, QID30, QID31, QID32, QID33, QID34, QID35, QID36, QID37, QID38, QID39, QID42, QID43) VALUES ('" + name + "', 'fjrennie1@outlook.com', 19, '" + university + "','" + QID7 + "','"  + QID8 + "','"  + QID9 + "','"  + QID14 + "','"  + QID16 + "','"  + QID17 + "','"  + QID18 + "','"  + QID19 + "','"  + QID20 + "','"  + QID21 + "','"  + QID22 + "','"  + QID23 + "','"  + QID24 + "','"  + QID25 + "','"  + QID26 + "','"  + QID27 + "','"  + QID28 + "','"  + QID30 + "','"  + QID31 + "','"  + QID32 + "','"  + QID33 + "','"  + QID34 + "','"  + QID35 + "','"  + QID36 + "','"  + QID37 + "','"  + QID38 + "','"  + QID39 + "','"  + QID42 + "','"  + QID43 +  "')";
     con.query(sql, function (err, result) {
       if (err) throw err;
       console.log("1 record inserted");
