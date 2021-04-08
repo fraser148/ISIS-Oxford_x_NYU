@@ -4,3 +4,4 @@ generator
 views/index copy.html
 Output.txt
 deets.txt
+.env

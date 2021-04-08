@@ -5,6 +5,7 @@ const path = require('path');
 const mysql = require('mysql');
 const stripe = require('stripe')('sk_test_gvP8PV77RxyRsaWydycqXNoz00Vx4cNCu9'); // Add your Secret Key Here
 const nodemailer = require('nodemailer');
+const dotenv = require('dotenv');
 
 const app = express();
 
@@ -19,11 +20,21 @@ app.use(express.static(path.join(__dirname, './views')));
 
 // Future Code Goes Here
 
+// Environment variables
+dotenv.config();
+
+//var con = mysql.createConnection({
+//  host: "localhost",
+//  user: "root",
+//  password: "",
+//  database: "projec11_node"
+//});
+
 var con = mysql.createConnection({
-  host: "localhost",
-  user: "root",
-  password: "",
-  database: "projec11_node"
+  host: process.env.HOST,
+  user: process.env.USER,
+  password: process.env.PASS,
+  database: process.env.DATABASE
 });
 
 
