@@ -1,5 +1,5 @@
 ---
 deployment:
   tasks:
-    - export DEPLOYPATH=/home/ISIS-Oxford_x_NYU
+    - export DEPLOYPATH=/home/projec11/ISIS-Oxford_x_NYU
     - /bin/cp -R * $DEPLOYPATH
