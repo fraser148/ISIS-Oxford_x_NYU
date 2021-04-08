@@ -2,22 +2,30 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
-  <title>Donation Completed</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<link href="css/main.css" rel="stylesheet" type="text/css">
+	<!--<link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">-->
+	<title>ISIS - NYU x Oxford</title>
 </head>
 
-<body class="bg-gray-900">
-  <nav class="bg-purple-900 h-20 flex justify-center">
-    <h1 class="text-white text-5xl">Donation App</h1>
-  </nav>
-  <div class="flex flex-col items-center mt-32 text-white text-2xl">
-    <p>Thank you for your generous donation.</p>
-    <p>Your payment has been received.</p>
-    <a href="/"><button class="bg-blue-700 rounded p-4 mt-3">Return</button></a>
-  </div>
+<body class="home-body">
+	<nav class="nav" style="opacity:.8">
+		<a href="index.html"><img src="images/isi.jpg" style="padding:20px;"></a>
+	</nav>
+
+	<div class="container">
+		<h1>Thank you!</h1>
+		<h2>YOU ARE NOW SIGNED UP</h2>
+		<p>You should have received an email to<span id="email"></span>with details of the NYU x OXFORD PenPal Program!</p>
+	</div>
 </body>
 
+<script src="https://js.stripe.com/v3/"></script>
+<script src="card.js"></script>
+<script>
+var email = "<%= email %>";
+document.getElementById("email").innerHTML = email;
+</script>
 </html>

@@ -7,7 +7,7 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link href="css/main.css" rel="stylesheet" type="text/css">
   <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
-  <title>Donation App</title>
+  <title>ISIS - NYU x Oxford</title>
 </head>
 
 <body class="home-body">
@@ -19,7 +19,9 @@
     <form action="/charge" method="POST" class="flex flex-col w-96 xl:w-auto m-5 bg-gray-500 p-5 rounded shadow-md bg-opacity-70 font-sans mb-20">
       <input class="shadow-md bg-gray-100 rounded border-gray-200 border-solid border-2 p-2 h-10 mb-4" type="text" name="name" placeholder="Name" required>
       <input type="email" class="shadow-inner bg-gray-100 rounded border-gray-200 border-solid border-2 p-2 h-10 mb-4" name="email" placeholder="Email" required>
-
+      <input type="number" class="shadow-md bg-gray-100 rounded border-gray-200 border-solid border-2 p-2 h-10 mb-4" name="age" placeholder="Age" min="16" max="100" required>
+      <input type="text" class="shadow-md bg-gray-100 rounded border-gray-200 border-solid border-2 p-2 h-10 mb-4" name="pronouns" placeholder="Pronouns">
+      
         <div class="bg-gray-900 text-white radios-top p-4">
           <p class="">Please select your University:</p>
         </div>

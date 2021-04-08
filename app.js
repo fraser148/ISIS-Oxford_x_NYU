@@ -1,8 +1,10 @@
 const express = require('express');
 const bodyParser = require('body-parser');
+const fs = require('fs');
 const path = require('path');
 const mysql = require('mysql');
 const stripe = require('stripe')('sk_test_gvP8PV77RxyRsaWydycqXNoz00Vx4cNCu9'); // Add your Secret Key Here
+const nodemailer = require('nodemailer');
 
 const app = express();
 
@@ -28,6 +30,7 @@ var con = mysql.createConnection({
 app.post("/charge", (req, res) => {
   try {
     var name = req.body.name;
+    var email = req.body.email;
     var QID7 = req.body.QID7;
     var QID5 = req.body.QID5;
 		var QID7 = req.body.QID7;
@@ -59,29 +62,29 @@ app.post("/charge", (req, res) => {
 		var QID39 = req.body.QID39;
 		var QID42 = req.body.QID42;
 		var QID43 = req.body.QID43;
-
-    stripe.customers
-      .create({
-        name: req.body.name,
-        email: req.body.email,
-        source: req.body.stripeToken
-      })
-      .then(customer =>
-        stripe.charges.create({
-          amount: 300,
-          currency: "gbp",
-          customer: customer.id,
-          description: "ISIS - " + name
-        })
-      )
-      .then(() => res.render("completed.html"))
-      .catch(err => console.log(err));
     var university = req.body.university;
     var sql = "INSERT INTO deets (name, email, age, university, QID7, QID8, QID9, QID14, QID16, QID17, QID18, QID19, QID20, QID21, QID22, QID23, QID24, QID25, QID26, QID27, QID28, QID30, QID31, QID32, QID33, QID34, QID35, QID36, QID37, QID38, QID39, QID42, QID43) VALUES ('" + name + "', 'fjrennie1@outlook.com', 19, '" + university + "','" + QID7 + "','"  + QID8 + "','"  + QID9 + "','"  + QID14 + "','"  + QID16 + "','"  + QID17 + "','"  + QID18 + "','"  + QID19 + "','"  + QID20 + "','"  + QID21 + "','"  + QID22 + "','"  + QID23 + "','"  + QID24 + "','"  + QID25 + "','"  + QID26 + "','"  + QID27 + "','"  + QID28 + "','"  + QID30 + "','"  + QID31 + "','"  + QID32 + "','"  + QID33 + "','"  + QID34 + "','"  + QID35 + "','"  + QID36 + "','"  + QID37 + "','"  + QID38 + "','"  + QID39 + "','"  + QID42 + "','"  + QID43 +  "')";
     con.query(sql, function (err, result) {
       if (err) throw err;
       console.log("1 record inserted");
     });
+    stripe.customers
+    .create({
+      name: req.body.name,
+      email: req.body.email,
+      source: req.body.stripeToken
+    })
+    .then(customer =>
+      stripe.charges.create({
+        amount: 300,
+        currency: "gbp",
+        customer: customer.id,
+        description: "ISIS - " + name
+      })
+    )
+    .then(() => res.render("completed.html", {email:email}))
+    .catch(err => console.log(err));
+    emailRecipient(email);
   } catch (err) {
     res.send(err);
   }
@@ -91,6 +94,35 @@ con.connect(function(err) {
   if (err) throw err;
   console.log("Connected!");
 });
+
+// Email Our recipient
+
+let transport = nodemailer.createTransport({
+  host: 'nyuxoxford.isismagazine.org.uk',
+  port: 465,
+  auth: {
+     user: 'isis@nyuxoxford.isismagazine.org.uk',
+     pass: 'Z]B=V3+,9r9$'
+  }
+});
+
+
+function emailRecipient(email) {
+  var html = fs.readFileSync("email.html","utf-8");
+  const message = {
+    from: 'isis@nyuxoxford.isismagazine.org.uk', // Sender address
+    to: 'fjrennie1@outlook.com',         // List of recipients
+    subject: 'You are signed up!', // Subject line
+    html: html // HTML body
+};
+transport.sendMail(message, function(err, info) {
+    if (err) {
+      console.log(err)
+    } else {
+      console.log(info);
+    }
+});
+}
 
 const port = process.env.PORT || 3000;
 app.listen(port, () => console.log('Server is running... http://localhost:3000'));
