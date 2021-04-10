@@ -13,10 +13,11 @@ const app = express();
 app.use(bodyParser.urlencoded({ extended: true }));
 
 // This will set express to render our views folder, then to render the files as normal html
-app.set('view engine', 'ejs');
-app.engine('html', require('ejs').renderFile);
+//app.set('view engine', 'ejs');
+//app.engine('html', require('ejs').renderFile);
 
-app.use("/views", express.static(path.resolve(__dirname, '/views')));
+//app.use("/views", express.static(path.resolve(__dirname, '/views')));
+app.use(express.static("views"))
 
 // Future Code Goes Here
 
