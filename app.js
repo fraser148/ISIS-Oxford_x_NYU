@@ -135,5 +135,9 @@ transport.sendMail(message, function(err, info) {
 });
 }
 
+app.get('/', function (req, res) {
+  res.render("index.html")
+})
+
 const port = process.env.PORT || 3000;
 app.listen(port, () => console.log('Server is running... http://localhost:3000'));
