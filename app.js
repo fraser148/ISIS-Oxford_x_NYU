@@ -16,7 +16,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.set('view engine', 'ejs');
 app.engine('html', require('ejs').renderFile);
 
-app.use(express.static(path.join('/views')));
+app.use(express.static(path.join(__dirname, '/views')));
 
 // Future Code Goes Here
 
@@ -113,7 +113,7 @@ let transport = nodemailer.createTransport({
   port: 465,
   auth: {
      user: 'isis@nyuxoxford.isismagazine.org.uk',
-     pass: 'Z]B=V3+,9r9$'
+     pass: process.env.EMAIL
   }
 });
 
