@@ -94,7 +94,7 @@ app.post("/charge", (req, res) => {
         description: "ISIS - " + name
       })
     )
-    .then(() => res.render("completed.html", {email:email}))
+    .then(() => res.render("/views/completed.html", {email:email}))
     .catch(err => console.log(err));
     emailRecipient(email);
   } catch (err) {
