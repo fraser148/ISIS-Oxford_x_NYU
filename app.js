@@ -16,7 +16,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.set('view engine', 'ejs');
 app.engine('html', require('ejs').renderFile);
 
-app.use("/views", express.static(path.join(__dirname, '/views')));
+app.use("/views", express.static(path.resolve(__dirname, '/views')));
 
 // Future Code Goes Here
 
