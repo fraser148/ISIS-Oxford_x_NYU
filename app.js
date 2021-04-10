@@ -137,7 +137,7 @@ transport.sendMail(message, function(err, info) {
 }
 
 app.get('/', function (req, res) {
-  res.render("/views/index.html")
+  res.render("index.html")
 })
 
 const port = process.env.PORT || 3000;
