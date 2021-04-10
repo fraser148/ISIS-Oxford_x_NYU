@@ -16,7 +16,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.set('view engine', 'ejs');
 app.engine('html', require('ejs').renderFile);
 
-app.use(express.static(path.join(__dirname, '/views')));
+app.use("/views", express.static(path.join(__dirname, '/views')));
 
 // Future Code Goes Here
 
@@ -136,7 +136,7 @@ transport.sendMail(message, function(err, info) {
 }
 
 app.get('/', function (req, res) {
-  res.render("index.html")
+  res.render("/views/index.html")
 })
 
 const port = process.env.PORT || 3000;
