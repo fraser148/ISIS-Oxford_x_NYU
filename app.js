@@ -13,11 +13,10 @@ const app = express();
 app.use(bodyParser.urlencoded({ extended: true }));
 
 // This will set express to render our views folder, then to render the files as normal html
-//app.set('view engine', 'ejs');
-//app.engine('html', require('ejs').renderFile);
+app.set('view engine', 'ejs');
+app.engine('html', require('ejs').renderFile);
 
-//app.use("/views", express.static(path.resolve(__dirname, '/views')));
-app.use(express.static("views"))
+app.use(express.static(path.join(__dirname, './views')));
 
 // Future Code Goes Here
 
@@ -94,7 +93,7 @@ app.post("/charge", (req, res) => {
         description: "ISIS - " + name
       })
     )
-    .then(() => res.render("/views/completed.html", {email:email}))
+    .then(() => res.render("completed.html", {email:email}))
     .catch(err => console.log(err));
     emailRecipient(email);
   } catch (err) {
@@ -135,10 +134,6 @@ transport.sendMail(message, function(err, info) {
     }
 });
 }
-
-app.get('/', function (req, res) {
-  res.render("index.html")
-})
 
 const port = process.env.PORT || 3000;
 app.listen(port, () => console.log('Server is running... http://localhost:3000'));
