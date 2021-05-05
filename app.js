@@ -42,6 +42,10 @@ app.post("/charge", (req, res) => {
   try {
     var name = req.body.name;
     var email = req.body.email;
+    var poem = req.body.poem;
+    var age = req.body.age;
+    var pronouns = req.body.pronouns;
+    var course = req.body.course;
     var QID7 = req.body.QID7;
     var QID5 = req.body.QID5;
 		var QID7 = req.body.QID7;
@@ -74,7 +78,7 @@ app.post("/charge", (req, res) => {
 		var QID42 = req.body.QID42;
 		var QID43 = req.body.QID43;
     var university = req.body.university;
-    var sql = "INSERT INTO deets (name, email, age, university, QID7, QID8, QID9, QID14, QID16, QID17, QID18, QID19, QID20, QID21, QID22, QID23, QID24, QID25, QID26, QID27, QID28, QID30, QID31, QID32, QID33, QID34, QID35, QID36, QID37, QID38, QID39, QID42, QID43) VALUES ('" + name + "', 'fjrennie1@outlook.com', 19, '" + university + "','" + QID7 + "','"  + QID8 + "','"  + QID9 + "','"  + QID14 + "','"  + QID16 + "','"  + QID17 + "','"  + QID18 + "','"  + QID19 + "','"  + QID20 + "','"  + QID21 + "','"  + QID22 + "','"  + QID23 + "','"  + QID24 + "','"  + QID25 + "','"  + QID26 + "','"  + QID27 + "','"  + QID28 + "','"  + QID30 + "','"  + QID31 + "','"  + QID32 + "','"  + QID33 + "','"  + QID34 + "','"  + QID35 + "','"  + QID36 + "','"  + QID37 + "','"  + QID38 + "','"  + QID39 + "','"  + QID42 + "','"  + QID43 +  "')";
+    var sql = "INSERT INTO deets (name, poem,course, pronouns, email, age, university, QID7, QID8, QID9, QID14, QID16, QID17, QID18, QID19, QID20, QID21, QID22, QID23, QID24, QID25, QID26, QID27, QID28, QID30, QID31, QID32, QID33, QID34, QID35, QID36, QID37, QID38, QID39, QID42, QID43) VALUES ('" + name + "','" + poem +  "','" + course + "','" + pronouns + "','" + email +"','" + age +"','"  + university + "','" + QID7 + "','"  + QID8 + "','"  + QID9 + "','"  + QID14 + "','"  + QID16 + "','"  + QID17 + "','"  + QID18 + "','"  + QID19 + "','"  + QID20 + "','"  + QID21 + "','"  + QID22 + "','"  + QID23 + "','"  + QID24 + "','"  + QID25 + "','"  + QID26 + "','"  + QID27 + "','"  + QID28 + "','"  + QID30 + "','"  + QID31 + "','"  + QID32 + "','"  + QID33 + "','"  + QID34 + "','"  + QID35 + "','"  + QID36 + "','"  + QID37 + "','"  + QID38 + "','"  + QID39 + "','"  + QID42 + "','"  + QID43 +  "')";
     con.query(sql, function (err, result) {
       if (err) throw err;
       console.log("1 record inserted");

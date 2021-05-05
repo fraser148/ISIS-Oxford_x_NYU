@@ -10,9 +10,16 @@ input[type="checkbox"]:checked + label span{
     box-shadow: 0px 0px 0px 2px white inset;
 }*/
 
-.radios label {
+label {
     display: inline;
     width:40%;
+    margin-left: 15px;
+}
+
+p.mainer-text {
+    color:white;
+    padding:20px;
+    text-align: center;
 }
 
 .home-body {
@@ -24,7 +31,7 @@ input[type="checkbox"]:checked + label span{
     padding: 0;
     margin:0;
 }
-/*
+
 .radios-top {
     background-color: #F7FAFC;
     border-radius: 0.25rem 0.25rem 0 0;
@@ -33,7 +40,7 @@ input[type="checkbox"]:checked + label span{
     background-color: #F7FAFC;
     border-radius: 0 0  0.25rem 0.25rem;
 }
-*/
+
 .success-inner {
     padding:5px;
     border-radius: 4px;
