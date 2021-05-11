@@ -3,7 +3,6 @@ const bodyParser = require('body-parser');
 const fs = require('fs');
 const path = require('path');
 const mysql = require('mysql');
-const stripe = require('stripe')('sk_test_gvP8PV77RxyRsaWydycqXNoz00Vx4cNCu9'); // Add your Secret Key Here
 const nodemailer = require('nodemailer');
 const dotenv = require('dotenv');
 
@@ -22,6 +21,8 @@ app.use(express.static(path.join(__dirname, './views')));
 
 // Environment variables
 dotenv.config();
+
+const stripe = require('stripe')(process.env.STRIPE); // Add your Secret Key Here
 
 //var con = mysql.createConnection({
 //  host: "localhost",
