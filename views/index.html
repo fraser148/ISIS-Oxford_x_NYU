@@ -7,6 +7,7 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link href="css/main.css" rel="stylesheet" type="text/css">
   <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <title>ISIS - NYU x Oxford</title>
 </head>
 
@@ -16,7 +17,7 @@
   </nav>
 
   <div class="flex justify-center mt-16">
-    <form action="/charge" method="POST" class="flex flex-col w-96 xl:w-auto m-5 bg-gray-500 p-5 rounded shadow-md bg-opacity-70 font-sans mb-20">
+    <form id="main-form" action="/charge" method="POST" class="flex flex-col w-96 xl:w-auto m-5 bg-gray-500 p-5 rounded shadow-md bg-opacity-70 font-sans mb-20">
       <p class="mainer-text">
         By filling out this form, we will match you with the perfect Pen Pal from across the pond
         all <b>for just &#163;3!</b>
@@ -1370,12 +1371,29 @@
 
       <div id="card-element" class="bg-gray-100 border-solid border-2 rounded border-gray-200 p-2 h-10 mb-4"></div>
       <div id="card-errors" role="alert"></div>
-      <button class="text-white bg-purple-900 p-4 rounded">Submit Payment</button>
+      <button id="submitter" class="text-white bg-purple-900 p-4 rounded">Submit Payment</button>
     </form>
   </div>
 </body>
 
 <script src="https://js.stripe.com/v3/"></script>
 <script src="card.js"></script>
+
+<script>
+  $(document).ready(function () {
+
+      $("#main-form").submit(function (e) {
+
+          //stop submitting the form to see the disabled button effect
+          e.preventDefault();
+
+          //disable the submit button
+          $("#submitter").attr("disabled", true);
+
+          return true;
+
+      });
+  });
+</script>
 
 </html>
