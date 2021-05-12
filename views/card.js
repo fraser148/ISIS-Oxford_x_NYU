@@ -1,4 +1,4 @@
-const stripe = Stripe('pk_test_GTLkHPeAw2AL0lfdyKmcneqe00BwlyVdqt'); // Your Publishable Key
+const stripe = Stripe('pk_live_NCVKayJPsribzovf5lltMWgC00bL0f2aF0'); // Your Publishable Key
 const elements = stripe.elements();
 
 // Create our card inputs
