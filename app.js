@@ -43,7 +43,7 @@ app.post("/charge", (req, res) => {
   try {
     var name = req.body.name;
     var email = req.body.email;
-    var poem = req.body.poem;
+    var poem = req.body.poem.replace(/"/g, '\\x22').replace(/'/g, '\\x27');
     var age = req.body.age;
     var pronouns = req.body.pronouns;
     var course = req.body.course;
